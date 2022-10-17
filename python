@@ -1,1 +1,31 @@
-print("Hello world!")
+username = ""
+password = ""
+
+
+def ent_prog():
+    print("Welcome to the program")
+
+
+def log_in():    
+    name = input("Enter username: ")
+    passw = input("Enter password: ")
+    if passw != password or name != username:
+        print("The username or password was incorrect.")
+        log_in()
+    else:
+        ent_prog()
+
+def create():
+    username = input("Enter username: ")
+    password = input("Enter password: ")
+    options()
+
+def options():
+    choice = input("Create new account (c), or log in (o): ")  
+    if choice == "c" or choice == "C":
+        create()
+    if choice == "o" or choice == "O":
+        log_in()
+        
+options()
+
